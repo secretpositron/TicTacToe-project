@@ -1,0 +1,128 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color :black;
+  background-image: url("https://articulate-heroes.s3.amazonaws.com/uploads/rte/oschzkai_TicTacToe_Samuel%20Apata_gif.gif");
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.container {
+  background:#A2A2A1FF;
+  margin: 50px;
+  padding: 50px;
+  border: 4px solid black;
+  border-radius: 25px;
+}
+
+.title {
+  text-align: center;
+}
+.title span{
+  color: ivory;
+}
+.status-action {
+  display: flex;
+  margin-top: 25px;
+  font-size: 20px;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.status span {
+  color:ivory;
+}
+
+.reset {
+  cursor: pointer;
+}
+
+.reset:hover {
+  color:ivory;
+}
+
+.game-grid {
+  background:ivory;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 50px;
+}
+
+.game-cell {
+  background:#A2A2A1FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 90px;
+  width: 90px;
+}
+
+.x,
+.o {
+  cursor: default;
+}
+
+.x::after {
+  content: '×';
+  font-size: 90px;
+}
+
+.o::after {
+  content: '○';
+  color: #F2EBD3;
+  font-size: 105px;
+}
+
+.win::after {
+  color: #BD022F;
+}
+
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+    grid-gap: 10px;
+  }
+
+  .game-cell {
+    height: 100px;
+    width: 100px;
+  }
+
+  .x::after {
+    font-size: 50px;
+  }
+
+  .o::after {
+    font-size: 75px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .game-cell {
+    height: 100px;
+    width: 100px;
+  }
+
+  .x::after {
+    font-size: 50px;
+  }
+
+  .o::after {
+    font-size: 75px;
+  }
+}
